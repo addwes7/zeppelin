@@ -46,8 +46,8 @@ jobs:
   run-e2e-tests-in-zeppelin-web:
     runs-on: ${{ matrix.os }}
     defaults:
-    run:
-      shell: bash      
+      run:
+        shell: bash      
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -89,8 +89,8 @@ jobs:
   run-playwright-e2e-tests:
     runs-on: ${{ matrix.os }}
     defaults:
-    run:
-      shell: bash
+      run:
+        shell: bash
     env:
       # Use VFS storage instead of Git to avoid Git-related issues in CI
       ZEPPELIN_NOTEBOOK_STORAGE: org.apache.zeppelin.notebook.repo.VFSNotebookRepo
